@@ -1,0 +1,105 @@
+@import "mixin.scss";
+.section-5{
+  @include pos1();
+  left: 0;
+  top: 100%;
+  .top-section{
+    width: 100%;
+    height: 30%;
+    background-color: #ffffff;
+    @include dflex(r,sa,c,nw);
+    .profill{
+      width: 100%;
+      @include dflex(r,c,c,nw);
+      img{
+        width: 9rem;
+        height: 9rem;
+        cursor: pointer;
+      }
+      .text{
+        p{
+          color:#c1c1c1;
+          font-size: 1rem;
+          margin-left: 2rem;
+          font-style: italic;
+        }
+        .name{
+          color: #c29f4d;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .bottom-section{
+    width: 100%;
+    height: 70%;
+    background: url("../files/img/layer.png") center no-repeat;
+    background-size: cover;
+    @include dflex(r,sa,c,nw);
+    .left-block{
+      @include dflex(c,sa,fs,nw);
+      color: #ffffff;
+      padding-left: 5rem;
+      h2{
+        text-transform: capitalize;
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-top: -1em;
+        span{
+          color: #c29f4d;
+        }
+      }
+      p{
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+      ul{
+        li{
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+        }
+      }
+      button{
+        width: 12rem;
+        height: 3rem;
+        text-transform: capitalize;
+        border: none;
+        background-color: #c29f4d;
+        color: #ffffff;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+    .right-block{
+      img{
+        width: 32rem;
+        height: 34rem;
+        margin-top: 5rem;
+        margin-left: -3rem;
+        z-index: 1;
+
+      }
+      .price{
+        width: 7rem;
+        height: 7rem;
+        background-color: #000000;
+        border-radius: 50%;
+        @include dflex(c,c,c,nw);
+        color: #ffffff;
+        margin-top: -5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

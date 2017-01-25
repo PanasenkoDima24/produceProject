@@ -1,0 +1,38 @@
+.section-5
+    .top-section
+        mixin createProfill(src,name)
+            div.profill
+                img(src= src alt= name title= name)
+                div.text
+                    p.
+                        “Garcinia cambogia is one of the main <br>
+                        components in one of the best-selling <br>
+                        supplemental weight loss products,<br>
+                        Hydroxycut., and researchers have <br>
+                        concluded that "the evidence for G.<br>
+                        cambogia is not compelling."<br>
+
+                    p.name= name + " | Abc Company"
+        +createProfill("files/img/girl.png","Jannette Doe")
+        +createProfill("files/img/boy.png","John Doe")
+    .bottom-section
+        .left-block
+            h2.
+                increase your energy level<br>
+                with <span>garcinia cambogia</span>
+            p.
+                It works as inhibit fat and cholesterol accumulation by<br>
+                slowing down the enzyme. Get The Most Effective<br>
+                Fat Burning Supplement Now!
+            ul
+                li Promotes weight loss
+                li Suppresses appetite
+                li Increases fat oxidation
+                li Promotes glycogen synthesis
+            button try it now
+        .right-block
+            img(src="files/img/lay.png")
+            div.price.
+                only<br>
+                $99.99
+

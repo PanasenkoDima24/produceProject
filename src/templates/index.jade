@@ -1,0 +1,22 @@
+head
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+	link(href="css/main.css" rel="stylesheet")
+	link(href="css/animate.css" rel="stylesheet")
+
+body
+	.wrapper(
+	data-0='transform: translateX(0%) translateY(0%);'
+	data-100p='transform: translateX(-50%) translateY(0%);'
+	data-200p='transform: translateX(-50%) translateY(-50%);'
+	data-300p='transform: translateX(0%) translateY(-50%);'
+	data-400p='transform: translateX(0%) translateY(-100%);'
+	data-500p='transform: translateX(-50%) translateY(-100%);'
+	)
+		include includes/header.jade
+		include includes/products.jade
+		include includes/thirdSection.jade
+		include includes/fourthSection.jade
+		include includes/fifthSection.jade
+		include includes/footer.jade
+		include includes/libs.jade

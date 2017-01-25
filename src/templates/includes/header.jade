@@ -1,0 +1,36 @@
+-var topMenuItems=[];
+-topMenuItems.push({itm:"Home", link:"#"});
+-topMenuItems.push({itm:"About the Product", link:"#"});
+-topMenuItems.push({itm:"Benefits", link:"#"});
+-topMenuItems.push({itm:"Testimonials", link:"#"});
+-topMenuItems.push({itm:"Buy", link:"#"});
+-topMenuItems.push({itm:"Contact", link:"#"});
+-topMenuItems.push({itm:"Blog", link:"#"});
+header
+    h1 produce
+    nav
+        each item, index in topMenuItems
+            li(class="top_menu_itm")
+                a(href=item.link)=item.itm
+    div.header-content
+        div.image
+            img(src="files/img/camb.png" alt="Cambogia" title="Cambbogia")
+        div.right-block
+            p.header-text.
+                increase your<br>
+                engergy level with
+            span garcinia cambogia
+            div.form
+                h2 try it today
+                form
+                    input(type="text" placeholder="Your Name")
+                    input(type="text" placeholder="Your Email")
+                    input(type="submit" value="order now")
+
+
+
+      
+
+
+
+

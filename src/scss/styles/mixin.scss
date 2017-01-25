@@ -1,0 +1,27 @@
+@mixin pos1(){
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+@mixin dflex($dir: c, $jc: c, $ai: c, $wr: c){
+
+  display: flex;
+
+  @if 		$dir == r { flex-direction: row; }
+  @else if 	$dir == c { flex-direction: column; }
+
+  @if 		$jc == s { 	justify-content: flex-start; }
+  @else if 	$jc == e { 	justify-content: flex-end; }
+  @else if 	$jc == c { 	justify-content: center; }
+  @else if 	$jc == sb { justify-content: space-between; }
+  @else if 	$jc == sa { justify-content: space-around; }
+
+  @if 		$ai == s { 	align-items: flex-start; }
+  @else if	$ai == e {	align-items: flex-end; }
+  @else if 	$ai == c { 	align-items: center; }
+  @else if	$ai == bs { align-items: baseline; }
+
+  @if 		$wr == w { 	flex-wrap: wrap; }
+  @else if 	$wr == nw { flex-wrap: nowrap ; }
+}

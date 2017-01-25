@@ -1,0 +1,107 @@
+@import "mixin.scss";
+.section-4{
+  @include pos1();
+  left: 0;
+  top: 50%;
+  background-color: #fefefe;
+  color: #c6c6c6;
+  padding-top: 5rem;
+  .top-title{
+    width: 80%;
+    height: 5rem;
+    margin: 0 auto;
+    @include dflex(r,sb,c,nw);
+
+    p:first-of-type{
+      width: 35%;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #c29f4d;
+      font-size: 2.4rem;
+      border-right: 0.2rem solid #c29f4d;
+      border-bottom: 0.2rem solid #c29f4d;
+      padding-bottom: 1rem;
+    }
+    p:nth-of-type(2){
+      width: 65%;
+      border-bottom: 0.2rem solid #c29f4d;
+      margin-top: 3.11rem;
+      font-size: 1.3rem;
+      padding-left: 5rem;
+      padding-bottom: 1.65rem;
+    }
+  }
+  .main-content{
+    width: 80%;
+    height: 15rem;
+    margin: 0 auto;
+    @include dflex(c,sa,c,nw);
+    h2{
+      font-size: 1.7rem;
+      margin-top: 3rem;
+      span{
+        color: #c29f4d;
+      }
+    }
+    p{
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      margin-top: -1rem;
+    }
+  }
+  .slider-block{
+    width: 80%;
+    height: 20rem;
+    margin: 0 auto;
+    @include dflex(r,sa,c,nw);
+    position: relative;
+    top: 1.8rem;
+    .slider{
+      width: 22rem;
+      height: 17rem;
+      background-color: #f1f1f0;
+      @include dflex(c,sa,c,nw);
+      .number{
+       width: 5rem;
+        height: 5rem;
+        background-color: #707070;
+        border-radius: 50%;
+        @include dflex(r,c,c,nw);
+        font-size: 2rem;
+        color: #ffffff;
+        margin-top: 2rem;
+      }
+      .slider-text{
+        text-align: center;
+      }
+    }
+  }
+  .bottom-block{
+    width: 100%;
+    height: 6rem;
+    background-color: #000000;
+    margin-top: 5.3rem;
+    @include dflex(r,sa,c,nw);
+    p{
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #303030;
+      margin-left: -1rem;
+    }
+    button{
+      width: 20rem;
+      height: 4rem;
+      text-transform: uppercase;
+      background-color: #c29f4d;
+      border: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}

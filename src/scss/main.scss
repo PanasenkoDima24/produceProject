@@ -1,0 +1,26 @@
+html,body{
+	width: 200%;
+	height: 200%;
+    margin: 0;
+	overflow-x: hidden;
+}
+
+html{
+	font-size: 1vw;
+}
+
+@import "styles/variables.scss";
+@import "styles/mixin.scss";
+@import "styles/normalize.scss";
+
+.wrapper{
+	position: fixed;
+	width: 200%;
+	height: 200%;
+}
+@import "styles/header.scss";
+@import "styles/products.scss";
+@import "styles/thirsSection.scss";
+@import "styles/fourthSection.scss";
+@import "styles/fifthSection.scss";
+@import "styles/footer.scss";

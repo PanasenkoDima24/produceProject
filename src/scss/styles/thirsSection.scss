@@ -1,0 +1,68 @@
+@import "mixin.scss";
+
+.section-3{
+  @include pos1();
+  right: 0;
+  top: 50%;
+  background: url("../files/img/may.png") center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding-top: 5rem;
+  .title{
+    width: 70%;
+    height: 5rem;
+    margin: 0 auto;
+    @include dflex(r,sb,c,nw);
+
+    p:first-of-type{
+      width: 35%;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #c29f4d;
+      font-size: 2.4rem;
+      border-right: 0.2rem solid #c29f4d;
+      border-bottom: 0.2rem solid #c29f4d;
+      padding-bottom: 1rem;
+    }
+    p:nth-of-type(2){
+      width: 65%;
+      border-bottom: 0.2rem solid #c29f4d;
+      margin-top: 3.11rem;
+      font-size: 1.3rem;
+      padding-left: 5rem;
+      padding-bottom: 1.65rem;
+    }
+  }
+
+  .text-information{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 4rem;
+    line-height: 1.3rem;
+    p:first-of-type{
+      font-size: 1rem;
+    }
+    p:nth-of-type(2){
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    h5{
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      span{
+        color: #c29f4d;
+      }
+    }
+  }
+  .check-block{
+    width: 73%;
+    height: auto;
+    @include dflex(r,sb,c,nw);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: -2rem;
+  }
+}

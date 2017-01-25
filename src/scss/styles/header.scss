@@ -1,0 +1,111 @@
+@import "mixin.scss";
+@import "fonts.scss";
+header{
+  @include pos1();
+  left: 0;
+  top: 0;
+  background: url("../files/img/header.png") center no-repeat;
+  background-size: cover;
+  h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: #ddc16d;
+    font-size: 4rem;
+    font-family: Arizona;
+    margin-top: 2rem;
+  }
+  nav{
+    width: 75rem;
+    height: 4rem;
+    margin: 0 auto;
+    background-color: #c29f4d;
+    position: relative;
+    top: -1rem;
+    @include dflex(r,sa,c,nw);
+    li{
+      list-style: none;
+      a{
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .header-content{
+    width: 75rem;
+    margin: 0 auto;
+    @include dflex(r,sb,c,nw);
+    .image{
+      width: 50%;
+      height: 100%;
+
+      img{
+        width: 37rem;
+        height: 37rem;
+        margin-top: 5.5rem;
+      }
+    }
+    .right-block{
+      width: 50%;
+      height: 100%;
+      padding-left: 5.5rem;
+      @include dflex(c,fs,c,nw);
+      .header-text{
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-top: 6.5rem;
+      }
+      span{
+        display: block;
+        text-transform: uppercase;
+        color: #ffd062;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-top: -2.3rem;
+        margin-left: -1rem;
+      }
+      .form{
+        @include dflex(c,fs,c,nw);
+        width: 24rem;
+        height: 20rem;
+        background-color: #d1aa50 ;
+        margin-top: 1.5rem;
+        h2{
+          width: 18rem;
+          text-align: center;
+          text-transform: uppercase;
+          color:#ffffff;
+          border-bottom: 0.2rem solid #ffffff;
+          padding: .5rem;
+        }
+        form{
+          width: 100%;
+          height: 100%;
+          margin-top: -0.5rem;
+          @include dflex(c,c,c,w);
+          input{
+            width: 19rem;
+            height: 3.8rem;
+            margin-top: .6rem;
+            background-color: #ecdcb7;
+            border: none;
+            padding-left: 1rem;
+            color: #000000;
+            &[type="submit"]{
+              background-color: #000000;
+              color: #ffffff;
+              text-transform: uppercase;
+              font-size: 1.5rem;
+            }
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
