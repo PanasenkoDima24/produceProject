@@ -115,6 +115,13 @@ gulp.task("icon", function () {
         .pipe(connect.reload());
 });
 
+gulp.task("php", function () {
+    gulp.src(inputDir + "/php/**/*.php")
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(gulp.dest(outputDir + "/php"))
+        .pipe(connect.reload());
+});
+
 
 //Область watch для автообновления тасков
 gulp.task("watch", function () {
@@ -123,7 +130,8 @@ gulp.task("watch", function () {
     gulp.watch(inputDir + "/js/**/*.js", ["js"]);
     gulp.watch(inputDir + "/scss/**/*.scss", ["scss"]);
     gulp.watch(inputDir + "/images/**/*.+(jpeg|jpg|png|tiff|webp/svg)", ["images"]);
-    gulp.watch(inputDir + "/fonts/**/*.*", ["fonts"])
+    gulp.watch(inputDir + "/fonts/**/*.*", ["fonts"]);
+    gulp.watch(inputDir + "/php/**/*.*", ["php"])
 });
 
 //  определяем свойства модуля connect
@@ -140,6 +148,7 @@ gulp.task("connect", function () {
 gulp.task("default", ["connect",
     "jade",
     "icon",
+     "php",
     "js",
     "scss",
     "images",

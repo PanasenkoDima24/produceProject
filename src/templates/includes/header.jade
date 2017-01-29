@@ -22,9 +22,13 @@ header
             span garcinia cambogia
             div.form
                 h2 try it today
-                form
-                    input(type="text" placeholder="Your Name")
-                    input(type="text" placeholder="Your Email")
+                form#form1
+                    input(type="hidden" name="project-name" value="Produce")
+                    input(type="hidden" name="admin-email" value="dimon24panasenko@gmail.com")
+                    input(type="hidden" name="form_subject" value="Buy medication")
+
+                    input(type="text" name="Name" placeholder="Your Name")
+                    input(type="text" name="E-mail" placeholder="Your Email")
                     input(type="submit" value="order now")
 
 

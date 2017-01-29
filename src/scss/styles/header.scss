@@ -99,9 +99,266 @@ header{
               color: #ffffff;
               text-transform: uppercase;
               font-size: 1.5rem;
+              transition: 0.3s;
+              &:hover{
+                opacity: 0.5;
+                cursor: pointer;
+                transition: 0.3s;
+              }
             }
             &:focus{
               outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Mobile*/
+@media (min-width: 320px) and (max-width: 500px) {
+  @import "mixin.scss";
+  @import "fonts.scss";
+
+  header{
+    @include pos1();
+    left: 0;
+    top: 0;
+    background: url("../files/img/header.png") center no-repeat;
+    background-size: cover;
+    h1{
+      text-align: center;
+      text-transform: capitalize;
+      color: #c29f4d;
+      font-size: 8rem;
+      font-family: Arizona;
+      margin-top: 2rem;
+    }
+    nav{
+      width: 45rem;
+      height: 35rem;
+      margin: 0 auto;
+      background-color: #c29f4d;
+      position: relative;
+      top: -4rem;
+      display: none;
+
+      li{
+        list-style: none;
+        a{
+          display: block;
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 3.5rem;
+          border-bottom: 0.2rem solid #ffffff;
+        }
+      }
+    }
+    .header-content{
+      width: 75rem;
+      margin: 0 auto;
+      @include dflex(c,sb,c,nw);
+      .image{
+        width: 50%;
+        height: 0%;
+        position: relative;
+        top: -11rem;
+
+        img{
+          width: 48rem;
+          height: 48rem;
+
+        }
+      }
+      .right-block{
+        width: 100%;
+        height: 100%;
+        //padding-left: 5.5rem;
+        @include dflex(c,c,c,nw);
+        .header-text{
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size: 4rem;
+          font-weight: 700;
+          margin-top: 18rem;
+        }
+        span{
+          display: block;
+          text-transform: uppercase;
+          color: #ffd062;
+          font-size: 4rem;
+          font-weight: 700;
+          margin-top: -3.7rem;
+          margin-left: -1.5rem;
+        }
+        .form{
+          @include dflex(c,fs,c,nw);
+          width: 100%;
+          height: 32%;
+          background-color: #d1aa50 ;
+          margin-top: 1.5rem;
+          h2{
+            font-size: 2.5rem;
+            width: 18rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ffffff;
+            border-bottom: 0.2rem solid #ffffff;
+            padding: .5rem;
+          }
+          form{
+            width: 100%;
+            height: 100%;
+            margin-top: -0.5rem;
+            @include dflex(c,c,c,w);
+            input{
+              width: 48rem;
+              height: 6.6rem;
+              margin-top: .6rem;
+              background-color: #ecdcb7;
+              border: none;
+              font-size: 2.5rem;
+              padding-left: 1rem;
+              color: #000000;
+              &[type="submit"]{
+                background-color: #000000;
+                color: #ffffff;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                transition: 0.3s;
+                &:hover{
+                  opacity: 0.5;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+              }
+              &:focus{
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Планшети*/
+@media (min-width: 501px) and (max-width: 768px){
+  @import "mixin.scss";
+  @import "fonts.scss";
+  header{
+    @include pos1();
+    left: 0;
+    top: 0;
+    background: url("../files/img/header.png") center no-repeat;
+    background-size: cover;
+    h1{
+      text-align: center;
+      text-transform: capitalize;
+      color: #c29f4d;
+      font-size: 5.5rem;
+      font-family: Arizona;
+      margin-top: 1rem;
+    }
+    nav{
+      width: 85rem;
+      height: 5rem;
+      margin: 0 auto;
+      background-color: #c29f4d;
+      position: relative;
+      top: -3.5rem;
+      @include dflex(r,sa,c,nw);
+      li{
+        list-style: none;
+        a{
+          display: block;
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 1.9rem;
+        }
+      }
+    }
+    .header-content{
+      width: 75rem;
+      margin: 0 auto;
+      @include dflex(r,sb,c,nw);
+      .image{
+        width: 50%;
+        height: 100%;
+
+        img{
+          width: 50rem;
+          height: 50rem;
+          margin-top: .5rem;
+          position: relative;
+          left: -8rem;
+        }
+      }
+      .right-block{
+        width: 50%;
+        height: 100%;
+        padding-left: 5rem;
+        @include dflex(c,fs,c,nw);
+        .header-text{
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size: 2.8rem;
+          font-weight: 700;
+          margin-top: .5rem;
+        }
+        span{
+          display: block;
+          text-transform: uppercase;
+          color: #ffd062;
+          font-size: 2.8rem;
+          font-weight: 700;
+          margin-top: -2.6rem;
+          margin-left: -1rem;
+        }
+        .form{
+          @include dflex(c,fs,c,nw);
+          width: 100%;
+          height: 34rem;
+          background-color: #d1aa50 ;
+          margin-top: 1.5rem;
+          h2{
+            width: 18rem;
+            text-align: center;
+            text-transform: uppercase;
+            color:#ffffff;
+            border-bottom: 0.2rem solid #ffffff;
+            padding: .5rem;
+          }
+          form{
+            width: 100%;
+            height: 60%;
+            margin-top: 2.5rem;
+            @include dflex(c,c,c,w);
+            input{
+              width: 30rem;
+              height: 5.8rem;
+              margin-top: .9rem;
+              background-color: #ecdcb7;
+              border: none;
+              padding-left: 1rem;
+              color: #000000;
+              &[type="submit"]{
+                background-color: #000000;
+                color: #ffffff;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                transition: 0.3s;
+                &:hover{
+                  opacity: 0.5;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+              }
+              &:focus{
+                outline: none;
+              }
             }
           }
         }

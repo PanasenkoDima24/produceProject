@@ -1,44 +1,178 @@
 @import "mixin.scss";
-.footer-section{
+@import "fonts.scss";
+.footer-section {
   @include pos1();
   right: 0;
   top: 100%;
-  .top-form{
-    width: 100%;
+  background-color: red;
+
+  @include dflex(r,c,fs,w);
+  .left-block {
+    width: 60%;
     height: 90%;
-    @include dflex(r,c,c,nw);
-    .left-footer-block{
-       width: 60%;
-       height: 100%;
-      .email{
-        width: 100%;
-        height: 40%;
-        background-color: #e7e7e7;
+    background-color: green;
+    .email {
+      width: 100%;
+      height: 33.3%;
+      background-color: #e7e7e7;
+      @include dflex(c, sb, c, nw);
+      .email-top {
+        width: 38%;
+        height: 50%;
+        @include dflex(r, sb, c, nw);
+        .letter {
+          font-size: 5rem;
+          color: #6e6e6e;
+        }
+        .letter-text {
+          line-height: 1.2rem;
+          color: #6e6e6e;
+          margin-top: 0.5rem;
+        }
       }
-      .payment{
-        width: 100%;
-        height: 20%;
-        background-color: #1e1e1e;
-      }
-      .information{
-        @extend .email;
+      .email-bottom {
+        width: 38%;
+        height: 50%;
+        @include dflex(r, sb, c, nw);
+        .letter-bottom {
+          font-size: 5rem;
+          color: #6e6e6e;
+        }
+        .letter-text {
+          line-height: 1.2rem;
+          color: #6e6e6e;
+          margin-top: 0.5rem;
+        }
       }
     }
-    .right-footer-block{
-      width: 40%;
-      height: 100%;
-      background-color: #d1aa50;
+    .payment{
+      width: 100%;
+      height: 20%;
+      background-color: #1e1e1e;
+      h2{
+        width: 62.5%;
+        margin: 0;
+        color: #ffffff;
+        position: relative;
+        left: 18rem;
+        top: 1.5rem;
+        text-transform: capitalize;
+        border-bottom: 0.2rem solid #545454;
+        padding-bottom: 1rem;
+      }
+      .credit-cart{
+        margin-left: 18rem;
+        margin-top: 3rem;
+        img{
+          width: 90%;
+          height: 2.5rem;
+          cursor: pointer;
+        }
+      }
     }
-  }
-
-
-
-
-
-
+    .description{
+      width: 100%;
+      height: 46.7%;
+      background-color: #e7e7e7;
+      h3{
+        width: 63%;
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-left: 18rem;
+        padding-top: 1.5rem;
+        color: #6e6e6e;
+        border-bottom: 0.2rem solid #6e6e6e;
+        padding-bottom: 1rem;
+      }
+      p{
+        padding-left: 18rem;
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        color: #6e6e6e;
+      }
+      }
+    }
+   .right-block{
+     width: 40%;
+     height: 90%;
+     background-color: #d1aa50;
+     margin: 0;
+     h2{
+       width: 80%;
+       color: #ffffff;
+       text-transform: uppercase;
+       text-align: center;
+       font-size: 2.6rem;
+       margin-top: 3rem;
+       border-bottom: 0.2rem solid #ffffff;
+       margin-left: 3.5rem;
+       padding-bottom: 1rem;
+     }
+     form{
+       height: 75%;
+       @include dflex(c,sa,c,nw);
+       input{
+         width: 80%;
+         height: 4rem;
+         border-radius: 0.5rem;
+         border: none;
+         &:focus{
+           outline: none;
+         }
+        &[type="text"]{
+          padding-left: 2rem;
+          font-size: 1.1rem;
+        }
+         &[type="submit"]{
+            background-color: #000000;
+           border: none;
+           color: #ffffff;
+           text-transform: uppercase;
+           font-size: 2rem;
+           cursor: pointer;
+         }
+       }
+       textarea{
+         padding-left: 2rem;
+         font-size: 1.1rem;
+         box-sizing: border-box;
+         padding-top: 1rem;
+         border-radius: 0.5rem;
+         &:focus{
+           outline: none;
+         }
+       }
+     }
+   }
   footer{
     width: 100%;
     height: 10%;
-    background-color: #2d2d2d;
+    background-color: #000000;
+    color: white;
+    @include dflex(r,sa,c,nw);
+    p{
+      font-size: 0.7rem;
+      margin-left: 4.5rem;
+      span{
+        text-transform: capitalize;
+        font-family: Arizona;
+        font-size: 3rem;
+        color: #d4b767;
+      }
+    }
+    .social{
+      margin-left: 4rem;
+      i{
+        margin-left: 3rem;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover{
+          color: #d4b767;
+          transition: 0.4s;
+        }
+      }
+    }
   }
-}
+  }
